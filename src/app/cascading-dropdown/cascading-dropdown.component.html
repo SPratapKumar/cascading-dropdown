@@ -1,0 +1,16 @@
+<h1>
+  Cascading Dropdowns within a Component
+</h1>
+<hr>
+<select [(ngModel)]="selectedCountry" (change)="getStatesforSelectedCountry($event.target.value)">
+  <option value="0">Select Country</option>
+  <option *ngFor="let country of countryList" value={{country.countryID}}>{{country.countryName}}</option>
+</select>
+<!--{{selectedCountry}}-->
+<p>
+  <select [(ngModel)]="selectedState">
+    <option value="0">Select State</option>
+    <option *ngFor="let state of stateList" value={{state.stateID}}>{{state.stateName}}</option>
+  </select>
+  <!--{{selectedState}}-->
+</p>
