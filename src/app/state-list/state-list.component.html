@@ -1,3 +1,10 @@
 <p>
   States
 </p>
+ <select [(ngModel)]="selectedState">
+    <option value="0">Select State</option>
+    <option *ngFor="let state of stateList" value={{state.stateID}}>{{state.stateName}}</option>
+  </select>
+  <!--{{selectedState}}-->
+
+  <button type="button" (click)=" ()">MyButton</button>

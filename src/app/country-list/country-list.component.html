@@ -1,3 +1,10 @@
 <p>
   Countries
 </p>
+<p>{{selectedCountry}}</p>
+<select [(ngModel)]="selectedCountry" (change)="getStatesByCountry($event.target.value)" > 
+  <option value="0">Select Country</option>
+  <option *ngFor="let country of countryList" value={{country.countryID}}>{{country.countryName}}</option>
+</select>
+
+<!--{{selectedCountry}}-->

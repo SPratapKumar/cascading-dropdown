@@ -8,6 +8,8 @@ import { CascadingDropdownComponent } from './cascading-dropdown/cascading-dropd
 import { CountryListComponent } from './country-list/country-list.component';
 import { StateListComponent } from './state-list/state-list.component';
 
+import {CountryStateService} from './shared/services/country-state.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { StateListComponent } from './state-list/state-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CountryStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
